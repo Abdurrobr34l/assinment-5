@@ -17,7 +17,44 @@
 <body class="font-hind-madurai mx-auto w-full max-w-[1920px]">
 
   <!--* HEADER START -->
-  <header></header>
+  <header class="py-6 px-[20px]">
+    <div class="header-container flex flex-col items-center justify-center gap-5">
+
+      <!--? Logo -->
+      <div>
+        <a href="./index.html" class="flex items-center gap-2 w-[150px] h-[42px]">
+          <img src="./images/logo.png" alt="It is the website logo" class="py-6 w-[40px]">
+          <span class="text-[20px] font-bold leading-5 text-[#006747]">Emergency Services</span>
+        </a>
+      </div>
+
+      <!--? Buttons -->
+      <div class="flex items-center gap-5">
+
+        <!--* Heart Button -->
+        <button
+          class="btn flex items-center py-[14px] px-5 rounded-full outline-none border-none bg-[#41FF6B1A] text-black transition-colors duration-300 hover:bg-[#00A63E] hover:text-white">
+          <span id="heart-counter">0</span>
+          <img src="./images/heart-icon.png" alt="It is an heart image" class="size-[22px]">
+        </button>
+
+        <!--* Coin Button -->
+        <button
+          class="btn flex items-center py-[14px] px-5 rounded-full outline-none border-none bg-[#41FF6B1A] text-black transition-colors duration-300 hover:bg-[#00A63E] hover:text-white">
+          <span id="coin-counter">100</span>
+          <img src="./images/coin.png" alt="It is an coin image" class="size-[22px]">
+        </button>
+
+        <!--* Coin Button -->
+        <button
+          class="btn flex items-center py-[14px] px-5 rounded-full outline-none border-none bg-[#00A63E] text-white transition-colors duration-300 hover:bg-[#41FF6B1A] hover:text-black">
+          <span id="copied-number-counter">2</span>Copy
+        </button>
+
+      </div>
+
+    </div>
+  </header>
   <!--* HEADER END -->
 
   <!--* MAIN START -->
