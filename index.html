@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emergency Services</title>
   <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
-  <!--* CSS -->
-  <link rel="stylesheet" href="./style.css">
+  <!--*  FONT-AWSOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!--* DAISY UI -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <!--* TAILWIND CSS -->
-  <!-- <link href="https://cdn.tailwindcss.com" rel="stylesheet"> -->
-   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--* CSS -->
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="font-hind-madurai mx-auto w-full max-w-[1920px]">
 
   <!--* HEADER START -->
-  <header class="py-6 px-[20px]">
+  <header class="py-6">
     <div class="header-container flex flex-col items-center justify-center gap-5">
 
       <!--? Logo -->
@@ -80,14 +83,97 @@
     <!--* BANNER END -->
 
     <!--* EMERGENCY NUMBERS & CALL HISTORY START -->
-    <section class="pt-12 pb-[86px] bg-[#F5FFF6]">
-      <div>
+    <section class="hotline-section pt-12 pb-[86px] bg-green-50">
+      <!-- *goto call history button -->
+      <!-- <a href="#call-history">Go To Call History</a> -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-[30px]">
 
         <!--? Emergency Numbers Grid Container -->
-        <div></div>
+        <div class="lg:col-span-9">
+          <div class="grid  md:grid-cols-2 xl:grid-cols-3 gap-[30px]">
+
+            <!--* Hotline 1 -->
+            <div class="p-6 lg:p-8 bg-white rounded-xl shadow-md">
+
+              <!--? Icon & Heart Button -->
+              <div class="flex items-center justify-between">
+                <img src="./images/hotline-icons/icon1.png" alt="It is an hotline icon">
+                <i class="fa-regular fa-heart" id="hotline-heart"></i>
+              </div>
+
+              <!--? Title -->
+              <div class="pt-4">
+                <h2 class="hotline-title text-lg font-bold text-[#111111]">National Emergency Number</h2>
+                <h3 class="text-[#5C5C5C]">National Emergency</>
+              </div>
+
+              <!--? Hotline Number & Category Badge -->
+              <div class="py-6">
+                <h4 class="hotline-phone-number text-[32px] font-bold leading-[35px]">999</h4>
+                <div>
+                  <p class="p-3 pl-[15px] bg-[#F2F2F2] text-[#5C5C5C] w-[50px] rounded-full">All</p>
+                </div>
+              </div>
+
+              <!--? Buttons -->
+              <div class="flex gap-2">
+                <button
+                  class="hotline-copy-button btn py-[10px] bg-transparent text-[#5C5C5C] transition-colors duration-500 hover:bg-[#00A63E] hover:text-white w-1/2 border-2 border-[#d4d6d5] rounded-xl">
+                  <i class="fa-solid fa-copy"></i>
+                  Copy
+                </button>
+                <button
+                  class="hotline-call-button btn py-[10px] bg-[#00A63E] text-white transition-colors duration-500 hover:bg-transparent hover:text-[#5C5C5C] w-1/2 border-2 border-[#d4d6d5] rounded-xl">
+                  <i class="fa-solid fa-phone"></i>
+                  Call
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
 
         <!--? Call History -->
-        <div></div>
+        <div id="call-history" class="p-5 bg-white rounded-xl lg:col-span-3 lg:p-6">
+
+          <!--* Title & Clear Button -->
+          <div class="flex items-center justify-between">
+
+            <h5 class="text-[#111111]">
+              <span><img src="./images/clock.png" alt="It is an clock image" class="inline-block mr-2"></span>
+              Call History
+            </h5>
+
+            <button id="clear-button"
+              class="btn p-4 bg-[#00A63E] text-white rounded-full transition duration-300 hover:bg-transparent hover:text-[#5C5C5C] hover:ring-2 hover:ring-[#d4d6d5]">Clear</button>
+
+          </div>
+
+          <!--* Call History -->
+          <div id="call-history-parent" class="flex flex-col gap-2 mt-4">
+
+            <!--? Call History 1 -->
+            <div class="p-4 bg-[#FAFAFA] rounded-lg">
+              <h6 id="history-hotline-title" class="text-lg font-semibold text-[#111111]">Fire Service Number</h6>
+              <p id="history-hotline-number" class="flex justify-between text-[#5C5C5C]">
+                Fire Service Number
+                <span id="call-history-time" class="text-[#111111]">11:36:58 AM</span>
+              </p>
+            </div>
+
+            <!--? Call History 1 -->
+            <div class="p-4 bg-[#FAFAFA] rounded-lg">
+              <h6 id="history-hotline-title" class="text-lg font-semibold text-[#111111]">Fire Service Number</h6>
+              <p id="history-hotline-number" class="flex justify-between text-[#5C5C5C]">
+                Fire Service Number
+                <span id="call-history-time" class="text-[#111111]">11:36:58 AM</span>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
     </section>

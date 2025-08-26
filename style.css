@@ -6,20 +6,29 @@
 
 /** MEDIA QUERY START */
 
+@media (min-width: 320px) {
+  header,
+  .hotline-section {
+    padding-inline: 20px;
+  }
+}
+
 @media (min-width: 576px) {
-  header {
-    padding-inline: 40px;
+  header,
+  .hotline-section {
+    padding-inline: 30px !important;
   }
   .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 0;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
   }
 }
 
 @media (min-width: 768px) {
-  header {
-    padding-inline: 60px;
+  header,
+  .hotline-section {
+    padding-inline: 60px !important;
   }
 }
 
