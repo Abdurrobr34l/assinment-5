@@ -35,7 +35,7 @@
       <!--? Buttons -->
       <div class="flex items-center gap-5">
 
-        <!--* Heart Button -->
+        <!--* Heart Counter Button -->
         <button
           class="btn flex items-center py-[14px] px-5 rounded-full outline-none border-none bg-[#41FF6B1A] text-black transition-colors duration-300 hover:bg-[#00A63E] hover:text-white">
           <span id="heart-counter">0</span>
@@ -45,14 +45,14 @@
         <!--* Coin Button -->
         <button
           class="btn flex items-center py-[14px] px-5 rounded-full outline-none border-none bg-[#41FF6B1A] text-black transition-colors duration-300 hover:bg-[#00A63E] hover:text-white">
-          <span id="coin-counter">100</span>
+          <span id="coin-counter">1000</span>
           <img src="./images/coin.png" alt="It is an coin image" class="size-[22px]">
         </button>
 
         <!--* Coin Button -->
         <button
           class="btn flex items-center py-[14px] px-5 rounded-full outline-none border-none bg-[#00A63E] text-white transition-colors duration-300 hover:bg-[#41FF6B1A] hover:text-black">
-          <span id="copied-number-counter">2</span>Copy
+          <span id="copied-number-counter">0</span>Copy
         </button>
 
       </div>
@@ -95,35 +95,74 @@
             <!--* Hotline 1 -->
             <div class="p-6 lg:p-8 bg-white rounded-xl shadow-md">
 
-              <!--? Icon & Heart Button -->
+              <!--? Icon & Heart Icon -->
               <div class="flex items-center justify-between">
                 <img src="./images/hotline-icons/icon1.png" alt="It is an hotline icon">
-                <i class="fa-regular fa-heart" id="hotline-heart"></i>
+                <i class="fa-regular fa-heart hotline-heart text-[#5C5C5C] transition-colors"></i>
               </div>
 
               <!--? Title -->
               <div class="pt-4">
-                <h2 class="hotline-title text-lg font-bold text-[#111111]">National Emergency Number</h2>
+                <h2 class="hotline-service-name text-lg font-bold text-[#111111]">National Emergency Number</h2>
                 <h3 class="text-[#5C5C5C]">National Emergency</>
               </div>
 
               <!--? Hotline Number & Category Badge -->
               <div class="py-6">
-                <h4 class="hotline-phone-number text-[32px] font-bold leading-[35px]">999</h4>
+                <h4 class="hotline-phone-number text-[32px] font-bold leading-[35px]">9</h4>
                 <div>
-                  <p class="p-3 pl-[15px] bg-[#F2F2F2] text-[#5C5C5C] w-[50px] rounded-full">All</p>
+                  <p class="p-3 py-2 bg-[#F2F2F2] text-[#5C5C5C] w-fit rounded-full">All</p>
                 </div>
               </div>
 
               <!--? Buttons -->
               <div class="flex gap-2">
                 <button
-                  class="hotline-copy-button btn py-[10px] bg-transparent text-[#5C5C5C] transition-colors duration-500 hover:bg-[#00A63E] hover:text-white w-1/2 border-2 border-[#d4d6d5] rounded-xl">
+                  class="hotline-copy-button btn py-[10px] bg-transparent text-[#5C5C5C] outline outline-2 outline-[#d4d6d5] rounded-xl transition-colors duration-500 hover:bg-[#00A63E] hover:text-white hover:outline-none w-1/2">
                   <i class="fa-solid fa-copy"></i>
                   Copy
                 </button>
                 <button
-                  class="hotline-call-button btn py-[10px] bg-[#00A63E] text-white transition-colors duration-500 hover:bg-transparent hover:text-[#5C5C5C] w-1/2 border-2 border-[#d4d6d5] rounded-xl">
+                  class="hotline-call-button btn py-[10px] bg-[#00A63E] text-white transition-colors duration-500 hover:bg-transparent hover:text-[#5C5C5C] w-1/2 hover:outline hover:outline-2 hover:outline-[#d4d6d5] rounded-xl">
+                  <i class="fa-solid fa-phone"></i>
+                  Call
+                </button>
+              </div>
+
+            </div>
+
+            <!--* Hotline 2 -->
+            <div class="p-6 lg:p-8 bg-white rounded-xl shadow-md">
+
+              <!--? Icon & Heart Icon -->
+              <div class="flex items-center justify-between">
+                <img src="./images/hotline-icons/police.png" alt="It is an police icon">
+                <i class="fa-regular fa-heart hotline-heart text-[#5C5C5C] transition-colors"></i>
+              </div>
+
+              <!--? Title -->
+              <div class="pt-4">
+                <h2 class="hotline-service-name text-lg font-bold text-[#111111]">Police Helpline Number</h2>
+                <h3 class="text-[#5C5C5C]">Police</>
+              </div>
+
+              <!--? Hotline Number & Category Badge -->
+              <div class="py-6">
+                <h4 class="hotline-phone-number text-[32px] font-bold leading-[35px]">999</h4>
+                <div>
+                  <p class="p-3 py-2 bg-[#F2F2F2] text-[#5C5C5C] w-fit rounded-full">Police</p>
+                </div>
+              </div>
+
+              <!--? Buttons -->
+              <div class="flex gap-2">
+                <button
+                  class="hotline-copy-button btn py-[10px] bg-transparent text-[#5C5C5C] outline outline-2 outline-[#d4d6d5] rounded-xl transition-colors duration-500 hover:bg-[#00A63E] hover:text-white hover:outline-none w-1/2">
+                  <i class="fa-solid fa-copy"></i>
+                  Copy
+                </button>
+                <button
+                  class="hotline-call-button btn py-[10px] bg-[#00A63E] text-white transition-colors duration-500 hover:bg-transparent hover:text-[#5C5C5C] w-1/2 hover:outline hover:outline-2 hover:outline-[#d4d6d5] rounded-xl">
                   <i class="fa-solid fa-phone"></i>
                   Call
                 </button>
@@ -135,7 +174,7 @@
         </div>
 
         <!--? Call History -->
-        <div id="call-history" class="p-5 bg-white rounded-xl lg:col-span-3 lg:p-6">
+        <aside id="call-history" class="p-5 bg-white rounded-xl lg:col-span-3 lg:p-6">
 
           <!--* Title & Clear Button -->
           <div class="flex items-center justify-between">
@@ -154,26 +193,17 @@
           <div id="call-history-parent" class="flex flex-col gap-2 mt-4">
 
             <!--? Call History 1 -->
-            <div class="p-4 bg-[#FAFAFA] rounded-lg">
+            <!-- <div class="p-4 bg-[#FAFAFA] rounded-lg">
               <h6 id="history-hotline-title" class="text-lg font-semibold text-[#111111]">Fire Service Number</h6>
               <p id="history-hotline-number" class="flex justify-between text-[#5C5C5C]">
-                Fire Service Number
-                <span id="call-history-time" class="text-[#111111]">11:36:58 AM</span>
+                999
+                <span class="text-[#111111]">11:36:58 AM</span>
               </p>
-            </div>
-
-            <!--? Call History 1 -->
-            <div class="p-4 bg-[#FAFAFA] rounded-lg">
-              <h6 id="history-hotline-title" class="text-lg font-semibold text-[#111111]">Fire Service Number</h6>
-              <p id="history-hotline-number" class="flex justify-between text-[#5C5C5C]">
-                Fire Service Number
-                <span id="call-history-time" class="text-[#111111]">11:36:58 AM</span>
-              </p>
-            </div>
+            </div> -->
 
           </div>
 
-        </div>
+        </aside>
 
       </div>
     </section>
@@ -182,6 +212,7 @@
   </main>
   <!--* MAIN END -->
 
+  <script src="./script.js"></script>
 </body>
 
 </html>
