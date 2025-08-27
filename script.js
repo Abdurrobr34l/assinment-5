@@ -67,7 +67,7 @@ for (let i = 0; i < callButton.length; i++) {
 
     let coin = parseInt(coniHave.innerText)
     if (coin >= 20) {
-      // alert(`📞 Calling ${serviceName[i].innerText} ${hotlineNumbers[i].innerText}`);
+      alert(`📞 Calling ${serviceName[i].innerText} ${hotlineNumbers[i].innerText}`);
       let newBalance = coin - 20
       coniHave.innerText = newBalance
 
