@@ -51,6 +51,8 @@ for (let i = 0; i < copyButtons.length; i++) {
 }
 
 //* 3: CALL BUTTON
+const goToCallHistoryButton = getElementById('call-history-button');
+
 const coniHave = getElementById('coin-counter');
 const serviceName = getElementsByClassName('hotline-service-name');
 const callButton = getElementsByClassName('hotline-call-button');
@@ -64,6 +66,7 @@ const clearHistoryButton = getElementById('clear-button');
 for (let i = 0; i < callButton.length; i++) {
 
   callButton[i].addEventListener('click', function () {
+    goToCallHistoryButton.classList.remove('hidden');
 
     let coin = parseInt(coniHave.innerText)
     if (coin >= 20) {
@@ -86,16 +89,18 @@ for (let i = 0; i < callButton.length; i++) {
       `
       callHistoryParent.prepend(newHistory);
 
-      
+
     } else {
       alert('❌ Insufficient Balance');
     }
-    
+
   })
-  
-  
-  
+
+
+
 }
+
 clearHistoryButton.addEventListener('click', function () {
   callHistoryParent.innerHTML = "";
+  goToCallHistoryButton.classList.add('hidden');
 })

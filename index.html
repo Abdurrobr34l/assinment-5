@@ -21,7 +21,7 @@
 <body class="font-hind-madurai mx-auto w-full max-w-[1920px]">
 
   <!--* HEADER START -->
-  <header class="py-6">
+  <header class="py-6" id="header">
     <div class="header-container flex flex-col items-center justify-center gap-5">
 
       <!--? Logo -->
@@ -84,13 +84,19 @@
 
     <!--* EMERGENCY NUMBERS & CALL HISTORY START -->
     <section class="hotline-section pt-12 pb-[86px] bg-green-50">
+
       <!-- *goto call history button -->
-      <!-- <a href="#call-history">Go To Call History</a> -->
+      <div class="flex justify-self-end mb-5 lg:hidden">
+        <a href="#call-history" id="call-history-button"
+          class="btn hidden bg-[#00A63E] text-white outline-none rounded-xl transition-colors duration-300 hover:bg-[#41FF6B1A] hover:text-black">Call
+          History</a>
+      </div>
+      <!--* Hotline Service Number & Call History -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-[30px]">
 
         <!--? Emergency Numbers Grid Container -->
-        <div class="lg:col-span-9">
-          <div class="grid  md:grid-cols-2 xl:grid-cols-3 gap-[30px]">
+        <div class="md:col-span-7 xl:col-span-9">
+          <div class="grid  md:grid-cols-1 xl:grid-cols-3 gap-[30px]">
 
             <!--* Hotline 1 -->
             <div class="p-6 lg:p-8 bg-white rounded-xl shadow-md">
@@ -447,7 +453,7 @@
         </div>
 
         <!--? Call History -->
-        <aside id="call-history" class="p-5 bg-white rounded-xl lg:col-span-3 lg:p-6">
+        <aside id="call-history" class="p-5 bg-white h-max rounded-xl md:col-span-5 xl:col-span-3 lg:p-6">
 
           <!--* Title & Clear Button -->
           <div class="flex items-center justify-between">
@@ -479,6 +485,7 @@
         </aside>
 
       </div>
+
     </section>
     <!--* EMERGENCY NUMBERS & CALL HISTORY END -->
 
